@@ -3,7 +3,7 @@
 **Mine sweeper robot built to strengthen and apply understanding of concepts (Electrical and Control Systems, Autonomous Robotics, and Mechanical Design) and  learned during self-directed study of MITOpenCourseWare's Undergraduate Course: "Introduction to Robotics"**
 
 ## Overview
-<img src="assets/videos/Demo GIF.GIF" alt="Demo GIF here" height="300" width="500"/>
+<img src="assets/videos/Demo GIF.GIF" alt="Demo GIF here" height="300" width="300"/>
 
 **Goal and Rules:**  The goal of this project to produce a robot capable of searching for hidden metal disks (“mines”) in a open space. Students design and implement a search algorithm that lets the robot hunt autonomously, and when a mine is found to pause on top of it. Identify as many mines as possible within a given time, say 2 minutes. Every time a fake mine is found, the robot must stop at that position and turn the buzzer on. If the mine is a newly found one, a credit point is given to the project team. If the mine has already been found by the robot, no credit is given. The robot resumes searching a mine.
 
