@@ -2,7 +2,7 @@
 
 **Mine sweeper robot built to strengthen and apply understanding of concepts (Electrical and Control Systems, Autonomous Robotics, and Mechanical Design) and  learned during self-directed study of MITOpenCourseWare's Undergraduate Course: "Introduction to Robotics"**
 
-#Overview
+# Overview
 (Insert demo gif here)
 
 **Goal and Rules:**  Find the location of fake mines buried in a minefield. Identify as many mines as possible within a given time, say 2 minutes. Every time a fake mine is found, the robot must stop at that position and turn the buzzer on. If the mine is a newly found one, a credit point is given to the project team. If the mine has already been found by the robot, no credit is given. The robot resumes searching a mine.
