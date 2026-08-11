@@ -12,8 +12,8 @@
 <img width="493" height="300" alt="image" src="https://github.com/user-attachments/assets/633eb7ce-4da2-48f5-91c0-7175061764d0" />
 
 ## System Overview
-**Primary Function:** Executes an autonomous side-to-side sweep pattern, detects metallic/conductive simulated hazards via an inductive proximity switch, triggers visual/audible alarms, and resumes sweep execution.
-**Obstacle Avoidance:** Infrared Obstacle Avoidance sensors located on each side of the front detect physical barriers and signal the robot to reposition automatically
+**Primary Function:** Executes an autonomous side-to-side sweep pattern, detects metallic/conductive simulated hazards via an inductive proximity switch, triggers visual/audible alarms, and resumes sweep execution. <br>
+**Obstacle Avoidance:** Infrared Obstacle Avoidance sensors located on each side of the front detect physical barriers and signal the robot to reposition automatically <br>
 **Control Method:** Use of NodeMCU-32S to run a fully autonomous closed loop finite state machine without outside control/influence
 
 ### State Machine 
