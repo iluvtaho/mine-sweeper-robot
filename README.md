@@ -7,7 +7,7 @@
 
 **Goal and Rules:**  The goal of this project to produce a robot capable of searching for hidden metal disks (“mines”) in a open space. Students design and implement a search algorithm that lets the robot hunt autonomously, and when a mine is found to pause on top of it. Identify as many mines as possible within a given time, say 2 minutes. Every time a fake mine is found, the robot must stop at that position and turn the buzzer on. If the mine is a newly found one, a credit point is given to the project team. If the mine has already been found by the robot, no credit is given. The robot resumes searching a mine.
 
-**The Minefield (Modified to suit available resources):** About ~~10~~ 5 metallic fake mines are buried in a ~~12’x12’~~ 120x80cm minefield, as shown in the photo below. The minefield is surrounded by a wall. A start point is marked in the minefield. Each trial, the robot at the start point for mine search. 
+**The Minefield (Modified to suit available resources):** About ~~10~~ 5 metallic fake mines are buried in a ~~12’x12’~~ 90x210cm minefield, as shown in the photo below. The minefield is surrounded by a wall. A start point is marked in the minefield. Each trial, the robot at the start point for mine search. 
 
 <img width="493" height="300" alt="image" src="https://github.com/user-attachments/assets/633eb7ce-4da2-48f5-91c0-7175061764d0" />
 
