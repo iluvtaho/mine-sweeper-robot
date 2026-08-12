@@ -48,6 +48,15 @@ void AvoidObstacleR() {
   analogWrite(motorRS, 150);
   analogWrite(motorLS, 255);
   delay(500);
+  analogWrite(motorRS, 255);
+  analogWrite(motorLS, 80);
+
+  digitalWrite(motorL1, HIGH);
+  digitalWrite(motorL2, LOW);
+
+  digitalWrite(motorR1, LOW);
+  digitalWrite(motorR2, HIGH);
+  delay(200);
 }
 
 void AvoidObstacleL() {
@@ -59,6 +68,15 @@ void AvoidObstacleL() {
   analogWrite(motorRS, 255);
   analogWrite(motorLS, 150);
   delay(500);
+  analogWrite(motorRS, 80);
+  analogWrite(motorLS, 170);
+
+  digitalWrite(motorL1, HIGH);
+  digitalWrite(motorL2, LOW);
+
+  digitalWrite(motorR1, LOW);
+  digitalWrite(motorR2, HIGH);
+  delay(200);
 }
 
 void MetalDetected() {
@@ -69,7 +87,7 @@ void MetalDetected() {
   digitalWrite(motorR1, LOW);
   digitalWrite(motorR2, LOW);
 
-  analogWrite(buzzer, 50);
+  analogWrite(buzzer, 10);
   delay(2000);
   analogWrite(buzzer, 0);
   delay(2500);
