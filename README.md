@@ -16,11 +16,11 @@
 **Obstacle Avoidance:** Infrared Obstacle Avoidance sensors located on each side of the front to detect physical barriers and signal the robot to reposition automatically <br>
 **Control Method:** Use of NodeMCU-32S to run a fully autonomous closed loop finite state machine without outside control/influence
 
+> *Design note: The robot drives in a side-to-side motion to maximize sweep area and to compensate for the inductive proximity switches small (8 mm) sensing radius.*
+
 ### State Machine 
 
 <img width="1567" height="667" alt="image" src="https://github.com/user-attachments/assets/dab829b8-b491-4a50-83df-1718f96e5d18" />
-
-The robot drives in a side-to-side motion to maximize sweep area and to compensate for the inductive proximity switches small (8 mm) sensing radius.
 
 ## Bill of Materials
 
@@ -32,19 +32,27 @@ The robot drives in a side-to-side motion to maximize sweep area and to compensa
 | **Alert System** | Active Piezo Buzzer | Audible indicator during mine detection |
 | **Motor Driver** | L298N Dual H-Bridge Motor Driver | H-Bridge dual DC motor drive control |
 | **Drive Motors** | TT DC Motor 6v | Drive motors |
-| **Power** | 4x AA Alkaline Batteries (6v), 9v Alkaline Battery | 4x AA batteries power the microcontroller, 2 obstacle sensors, motor driver, and drive motors |
+| **Power** | 4x AA Alkaline Batteries (6v), 9v Alkaline Battery | 4x AA batteries power the microcontroller, 2 obstacle sensors, motor driver, and drive motors. 9v Battery powers the inductive proximity switch (6-36v operating voltage)|
 
 ## Code Structure
 
-[*View Final Code*](./assets/code/Metal_Detecting_Robot.ino)
+[*View Final C++ Code*](./assets/code/Metal_Detecting_Robot.ino)
 
 ## Trials and Iterations
 
-I did five trials to see if I can minimize the time it takes to find all 5 mines. Although the amount of mines and size of the minefield are smaller than the original specified in the course, I believe the hardware limitations (8mm detection radius, smaller chassis, etc.) justify this. To actually fit the video files into the repository I sped them up 5x. Original speed video links are available [here](https://drive.google.com/drive/folders/1LTC-wA61IuTCIbSAw-TUQX8wArLBp5uN?usp=sharing).
+To optimize the search algorithm and minimize the time required to clear all 5 targets, the system underwent five trials before a final sixth run. 
+
+> *Note: Due to hardware constraints (8mm detection radius and compact chassis size), the physical minefield scale was adapted from the original MIT OCW specifications. Trial videos are accelerated 5x for repository optimization. [Unedited real-time footage is available here](https://drive.google.com/drive/folders/1LTC-wA61IuTCIbSAw-TUQX8wArLBp5uN?usp=sharing).*
 
 ### 1st Trial:
 
 [*First Trial Video*](./assets/videos/First%20Trial%20(5x%20speed).mp4)
 
-**Trial Observations:** Obstacle avoidance sensors work perfectly fine and on occasion the robot may seem stuck in a loop of avoiding and turning back into an obstacle, however, given enough time it will ~~un~~intentionally break out by having the robot turn the opposite way. This may have been caused by the millis timer in the movement loop, that alternates between right and left, eventually pick the correct direction. The robot would also have its wheels caught on the tape or mines themselves and would have it orbit the mine and eventually detect it OR get completely stuck and require assistance. Although its effects were positive, I deemed it unfair. Overall, the robot's performance was decent, achieving a time of 2 minutes and 32 seconds to find all mines. The buzzer was also obnoxiously loud. 
-**Iterations:** First, I added an **intentional** movement pattern so the robot doesn't get stuck in obstacle avoidance loops. After backing up, it will turn the opposite way for a short amount of time. I didn't increase the delay time because there is a chance it can back up into another wall (especially at corners) and damage the chassis. After testing this movement pattern I flattened out and securely taped the mines so the wheels wouldn't get caught up in them. Finally, I lowered the sound of the buzzer.
+* **Performance:** The robot successfully cleared the minefield in **4 minutes and 34 seconds**.
+* **Trial Observation:** While baseline obstacle avoidance functioned, the robot occasionally became trapped in "avoidance loops" in corners. Furthermore, the wheels physically snagged on the raised edges of the metallic targets, inadvertently pulling the robot directly over the mine. These problems caused lots of time to be wasted, especially the loop traps.
+* **Root Causes:** 
+  1. The alternating `millis()` timer logic for turning randomly selected directions, leading to repetitive corner trapping. 
+  2. Target disks were not mounted flush with the arena floor, causing mechanical interference.
+* **Engineering Iteration:** 
+  * **Software:** Implemented a deterministic escape sequence in the state machine—upon reversing from an obstacle, the robot now forces a turn in the *opposite* direction of its previous approach. Pivot delay times were kept tight to prevent rear-collisions.
+  * **Hardware:** Flush-mounted and secured the metallic targets to the arena floor to ensure sensor triggers were based purely on inductive detection, not mechanical snagging. Lowered the PWM value to the piezo buzzer to reduce acoustic harshness during alerts.
