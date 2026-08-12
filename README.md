@@ -14,7 +14,7 @@
 
 ---
 
-### Experiment Environment Adaptations
+### Testing Environment Adaptations
 To adapt the original MIT OCW specification to locally available resources and workspace constraints, the experimental setup was modified as follows:
 
 * **Original Specification:** 10 metallic mines in a 12' x 12' arena enclosed with 6" cushioned walls and rounded corners.
