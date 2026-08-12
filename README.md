@@ -1,6 +1,6 @@
 # mine-sweeper-robot
 
-**Mine sweeper robot built to strengthen and apply understanding of concepts (Electrical and Control Systems, Autonomous Robotics, and Mechanical Design) and  learned during self-directed study of MITOpenCourseWare's Undergraduate Course: "Introduction to Robotics"**
+**Mine sweeper robot built to strengthen and apply understanding of concepts (Electrical and Control Systems, Autonomous Robotics, and Mechanical Design) learned during self-directed study of MITOpenCourseWare's Undergraduate Course: "Introduction to Robotics"**
 
 ## Overview
 <img src="assets/videos/Demo GIF.GIF" alt="Demo GIF here" height="300" width="300"/>
