@@ -65,5 +65,5 @@ To optimize the search algorithm and minimize the time required to clear all 5 t
   1. The alternating `millis()` timer logic for turning randomly selected directions, leading to repetitive corner trapping. 
   2. Target disks were not mounted flush with the arena floor, causing mechanical interference.
 * **Engineering Iteration:** 
-  * **Software:** Implemented a deterministic escape sequence in the state machine—upon reversing from an obstacle, the robot now forces a turn in the *opposite* direction of its previous approach. Pivot delay times were kept tight to prevent rear-collisions.
-  * **Hardware:** Flush-mounted and secured the metallic targets to the arena floor to ensure sensor triggers were based purely on inductive detection, not mechanical snagging. Lowered the PWM value to the piezo buzzer to reduce acoustic harshness during alerts.
+  * **Software:** Implemented a deterministic escape sequence in the state machine—upon reversing from an obstacle, the robot now forces a turn in the *opposite* direction of its previous approach. Pivot delay times were kept tight to prevent rear-collisions. Lowered the PWM value to the piezo buzzer to reduce acoustic harshness during alerts.
+  * **Hardware:** Secured the metallic targets to the arena floor to ensure sensor triggers were based purely on inductive detection, not mechanical snagging.
