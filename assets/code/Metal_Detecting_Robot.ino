@@ -48,6 +48,7 @@ void AvoidObstacleR() {
   analogWrite(motorRS, 150);
   analogWrite(motorLS, 255);
   delay(500);
+  //turn opposite direction (left)
   analogWrite(motorRS, 255);
   analogWrite(motorLS, 80);
 
@@ -68,6 +69,7 @@ void AvoidObstacleL() {
   analogWrite(motorRS, 255);
   analogWrite(motorLS, 150);
   delay(500);
+  //turn opposite direction (right)
   analogWrite(motorRS, 80);
   analogWrite(motorLS, 170);
 
