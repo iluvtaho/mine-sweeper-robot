@@ -33,3 +33,15 @@ The robot drives in a side-to-side motion to maximize sweep area and to compensa
 | **Motor Driver** | L298N Dual H-Bridge Motor Driver | H-Bridge dual DC motor drive control |
 | **Drive Motors** | TT DC Motor 6v | Drive motors |
 | **Power** | 4x AA Alkaline Batteries (6v), 9v Alkaline Battery | 4x AA batteries power the microcontroller, 2 obstacle sensors, motor driver, and drive motors |
+
+## Code Structure
+
+[*View Final Code*](./assets/code/Metal_Detecting_Robot.ino)
+
+## Trials and Iterations
+
+I did five trials to see if I can minimize the time it takes to find all 5 mines. Although the amount of mines and size of the minefield are smaller than the original specified in the course, I believe the hardware limitations (8mm detection radius, smaller chassis, etc.) justify this.
+
+### 1st Trial:
+<video src="assets/videos/First Trial (5x speed).mp4" width="100%"></video>
+**Trial Observations:** Obstacle avoidance sensors work perfectly fine and 
