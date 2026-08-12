@@ -1,13 +1,24 @@
 # mine-sweeper-robot
 
-**Mine sweeper robot built to strengthen and apply understanding of concepts (Electrical and Control Systems, Autonomous Robotics, and Mechanical Design) learned during self-directed study of MITOpenCourseWare's Undergraduate Course: "Introduction to Robotics"**
+**Mine sweeper robot built to strengthen and apply understanding of concepts (Electrical and Control Systems, Autonomous Robotics, and Mechanical Design) learned during self-directed study of MITOpenCourseWare's Undergraduate Course: "2.12 Introduction to Robotics"**
 
 ## Overview
 <img src="assets/videos/Demo GIF.GIF" alt="Demo GIF here" height="300" width="300"/>
 
-**Goal and Rules:**  The goal of this project to produce a robot capable of searching for hidden metal disks (“mines”) in a open space. Students design and implement a search algorithm that lets the robot hunt autonomously, and when a mine is found to pause on top of it. Identify as many mines as possible within a given time, say 2 minutes. Every time a fake mine is found, the robot must stop at that position and turn the buzzer on. If the mine is a newly found one, a credit point is given to the project team. If the mine has already been found by the robot, no credit is given. The robot resumes searching a mine.
+### Course Specification & Objectives
 
-**The Minefield (Modified to suit available resources):** About ~~10~~ 5 metallic fake mines are buried in a ~~12’x12’~~ 90x210cm minefield, as shown in the photo below. The minefield is surrounded by a wall. A start point is marked in the minefield. Each trial, the robot at the start point for mine search. 
+> **Goal and Rules:**  
+> *"The goal of this project to produce a robot capable of searching for hidden metal disks (“mines”) in a open space. Students design and implement a search algorithm that lets the robot hunt autonomously, and when a mine is found to pause on top of it. Identify as many mines as possible within a given time, say 2 minutes. Every time a fake mine is found, the robot must stop at that position and turn the buzzer on. If the mine is a newly found one, a credit point is given to the project team. If the mine has already been found by the robot, no credit is given. The robot resumes searching a mine."*
+>
+> — **Source:** *MIT OpenCourseWare: 2.12 Introduction to Robotics (Lab 3)*
+
+---
+
+### Experiment Environment Adaptations
+To adapt the original MIT OCW specification to locally available resources and workspace constraints, the experimental setup was modified as follows:
+
+* **Original Specification:** 10 metallic mines in a 12' x 12' arena enclosed with 6" cushioned walls and rounded corners.
+* **Modified Setup:** 5 metallic mines in a 90 cm x 210 cm enclosed minefield bounded by physical walls and sharp corners. 
 
 <img width="493" height="300" alt="image" src="https://github.com/user-attachments/assets/633eb7ce-4da2-48f5-91c0-7175061764d0" /> (Insert photo of used minefield)
 
