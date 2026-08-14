@@ -71,7 +71,7 @@ To optimize the search algorithm and minimize the time required to clear all 5 t
 
 ### 2nd Trial:
 
-[*Second Trial Video*](./assets/videos/Second%20Trial%(5x%20speed).mp4)
+[*Second Trial Video*](./assets/videos/Second%20Trial%aVideo%(5x%20speed).mp4)
 
 * **Performance:** The robot unsuccessfully cleared the minefield. Trial took **6 minutes and 30 seconds**
 * **Trial Observation:** During the escape sequence (accelerating from a dead stop after detecting a mine), the robot frequently stuttered, spun endlessly in circles, or completely reset its state machine, registering the same mine multiple times.
