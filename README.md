@@ -20,7 +20,7 @@ To adapt the original MIT OCW specification to locally available resources and w
 * **Original Specification:** 10 metallic mines in a 12' x 12' arena enclosed with 6" cushioned walls and rounded corners.
 * **Modified Setup:** 5 metallic mines in a 90 cm x 210 cm enclosed minefield bounded by physical walls and sharp corners. 
 
-<img width="493" height="300" alt="image" src="https://github.com/user-attachments/assets/633eb7ce-4da2-48f5-91c0-7175061764d0" /> (Insert photo of used minefield)
+<img width="493" height="300" alt="image" src="https://github.com/user-attachments/assets/633eb7ce-4da2-48f5-91c0-7175061764d0" /> <img width="493" height="300" alt="minefield" src="/assets/photos/Minefield.JPG">
 
 ## System Overview
 **Primary Function:** Executes an autonomous side-to-side sweep pattern, detects metallic/conductive simulated hazards via an inductive proximity switch, triggers audible alarms, and resumes sweep execution. <br>
