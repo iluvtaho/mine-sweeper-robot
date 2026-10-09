@@ -104,4 +104,27 @@ To optimize the search algorithm and minimize the time required to clear all 5 t
   1. The turn direction interval is too short to do a full sweep.
 * **Iterations:** 
   * **Software:** Extended the interval from 600 ms to 800 ms, while also lowering the motor PWM values to compensate for the longer active time.
-* **Outcome:** In the uncut video, I didn't notice that it had detected all the mines and left it running for about 6 minutes. This caused the Li-ion batteries to expend most of their capacity. Whenever I tried to test the robot again it would only run for about 1 minute before freezing. Since the batteries are rechargeable I'll be getting a charging module to refill the batteries soon and get on with the final trial. 
+* **Outcome:** In the uncut video, I didn't notice that it had detected all the mines and left it running for about 6 minutes. This caused the Li-ion batteries to expend most of their capacity. Whenever I tried to test the robot again it would only run for about 1 minute before freezing. Since the batteries are rechargeable I'll be getting a charging module to refill the batteries soon and get on with the final trial.
+
+### 5th Trial (Finally):
+
+[*Fifth Trial Video*](./assets/videos/Fifth%20Trial%20Video%20(5x%20Speed).mp4)
+
+* **Performance:** The robot successfully cleared the minefield. Trial took **2 minutes and 50 seconds**
+* **Trial Observation:** Decent trial. The robot cleared the field easily and didn't power down (because I recharged the batteries to full). Though towards the end, it did get stuck (probably due to power cables not being connected to breadboard correctly) for about 10 seconds before getting back on track again.
+* **Final Verdict:** All core engineering requirements met. The robot successfully executes an autonomous side-to-side sweep pattern, detects mines, and avoids walls without resetting or browning out.
+
+## Future Roadmap
+While the current iteration successfully achieves its core mine-sweeping and navigation requirements, future development to further my understanding can include:
+* **Sensor fusion** - Integrating sensor arrays to reduce false positives (odometry, LIDAR mapping, etc.)
+* **Mapping** - Generating live map of the cleared 90x120cm area to log exact coordinates of mines (Wifi or bluetooth)
+* **Swarm Integration (I like this)** - Allowing multiple clones of the robot to communicate with one another and sweep the area autonomously
+
+## Conclusion
+All in all, this project helped me strengthen my understanding of electrical and control systems and mechanical design. I learned how to design and implement a search algorithm/pattern and a closed loop finite state machine to enable a robot to move without outside influence. This includes handling `millis()` timer logic for pivots, writing escape sequences to escape corner traps, and adjusting PWM values for motor speed and buzzer acoustics. Along the course of the project, I encountered many problems with power (mostly due to me using AA batteries). 
+I learned about stall current spikes, voltage sag, and battery internal resistance. Although, I did try solving these problems purely using code, I learned that, sometimes, some problems need to be solved the simplest way and bought 18650 Li-Ion batteries instead. The most valuable skill I learned is iterative design. Through five documented trials, I learned how to identify root causes of failures and apply hardware and software reiterations to achieve a final, fully operational robot. 
+Even though this project took me a whole month to finish (mostly due to my laziness to buy the 18650 batteries) I learned so much and most importantly had fun.
+
+## Contact
+**[Jared Caldo]**
+**LinkedIn:** www.linkedin.com/in/jared-caldo-1086653a9
